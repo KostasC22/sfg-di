@@ -4,12 +4,12 @@ public class GreetingServiceFactory {
 
     private GreetingRepository greetingRepository;
 
-    public GreetingServiceFactory(GreetingRepository greetingRepository){
+    public GreetingServiceFactory(GreetingRepository greetingRepository) {
         this.greetingRepository = greetingRepository;
     }
 
-    public GreetingService createGreetingService(String lang){
-        switch (lang){
+    public GreetingService createGreetingService(String lang) {
+        switch (lang) {
             case "en":
                 return new PrimaryGreetingService(greetingRepository);
             case "de":
@@ -19,6 +19,7 @@ public class GreetingServiceFactory {
             default:
                 return new PrimaryGreetingService(greetingRepository);
         }
+
     }
 
 }

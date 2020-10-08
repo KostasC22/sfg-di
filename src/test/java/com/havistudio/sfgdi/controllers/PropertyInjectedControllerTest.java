@@ -12,12 +12,12 @@ class PropertyInjectedControllerTest {
     void setUp() {
         controller = new PropertyInjectedController();
 
-        controller.greetingService = new ConstructorGreetingService();
+        controller.greetingServiceImpl = new ConstructorGreetingService();
     }
 
     @Test
     void getGreeting(){
-        System.out.println(controller.getGreeting());
+        System.out.println(controller.sayHello());
     }
 
 }
