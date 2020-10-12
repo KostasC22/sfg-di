@@ -4,6 +4,7 @@ import com.havistudio.sfgdi.controllers.ConstructorInjectedController;
 import com.havistudio.sfgdi.controllers.GetterInjectedController;
 import com.havistudio.sfgdi.controllers.MyController;
 import com.havistudio.sfgdi.controllers.PropertyInjectedController;
+import com.havistudio.sfgdi.examplebeans.FakeDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -16,12 +17,9 @@ public class SfgDiApplication {
 
 		MyController controller = (MyController) ctx.getBean("myController");
 
-		System.out.println(controller.hello());
-		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
-		System.out.println(ctx.getBean(GetterInjectedController.class).sayHello());
-		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
+		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
 
-
+		System.out.println(fakeDataSource.getUser());
 	}
 
 }
