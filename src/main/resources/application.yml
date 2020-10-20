@@ -1,5 +1,5 @@
 guru:
-  jms:
-    username: JMS Username
-    password: somepass
-    url: SomeUrl
+    jms:
+        username: JMS Username
+        password: somepass
+        dburl: SomeUrl
