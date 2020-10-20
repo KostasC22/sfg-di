@@ -13,6 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sfg-di</name>
 	<description>Depedency injection examples</description>
+	<packaging>jar</packaging>
 
 	<dependencies>
 		<dependency>
